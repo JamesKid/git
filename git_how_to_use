@@ -1,0 +1,28 @@
+# Description     : this file is teach  you how to use github in linux
+# date            : 2013_12_13_11_00
+# Author          : JamesKid
+# Version         : v1.0
+
+1.config local ssh key 
+	# cd ~/.ssh
+	# ssh-keygen -t rsa -C "YourEmail"
+	press enter to continue
+
+2.add ssh key to github 
+	login your github,then --> account-setting -->SSH Keys --> Add SSH Key 
+	input a title to "Title"
+	input  ~/.ssh/iid_rsa.pub conent to "Key"
+
+3.clone it from github to localhost 
+	# mkdir php
+	# cd php
+	# git clone git@github.com:YourAccountName/RepositoriesName
+
+4.test 
+	# touch test1
+	# git add test1
+	# git commit -m "test1"
+
+5.push it to github
+	# git push 
+
