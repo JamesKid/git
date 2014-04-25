@@ -4,47 +4,52 @@
 # Version         : v1.0
 # Email           : 406358964@qq.com
 
-# 1. how to clone repo from github
-	1.config local ssh key 
-		# cd ~/.ssh
-		# ssh-keygen -t rsa -C "YourEmail"
-		press enter to continue
+# basic use 
+	# 1. how to clone repo from github
+		1.config local ssh key 
+			# cd ~/.ssh
+			# ssh-keygen -t rsa -C "YourEmail"
+			press enter to continue
 
-	2.add ssh key to github 
-		login your github,then --> account-setting -->SSH Keys --> Add SSH Key 
-		input a title to "Title"
-		input  ~/.ssh/iid_rsa.pub conent to "Key"
+		2.add ssh key to github 
+			login your github,then --> account-setting -->SSH Keys --> Add SSH Key 
+			input a title to "Title"
+			input  ~/.ssh/iid_rsa.pub conent to "Key"
 
-	3.clone it from github to localhost 
-		# mkdir php
-		# cd php
-		# git clone git@github.com:YourAccountName/RepositoriesName
+		3.clone it from github to localhost 
+			# mkdir php
+			# cd php
+			# git clone git@github.com:YourAccountName/RepositoriesName
 
-	4.test 
-		# touch test1
-		# git add test1
-		# git commit -m "test1"
+		4.test 
+			# touch test1
+			# git add test1
+			# git commit -m "test1"
 
-	5.push it to github
-		# git push 
-	
-# 2. how to pull local to github first time 
-	1. create a repo in github 
+		5.push it to github
+			# git push 
+		
+	# 2. how to pull local to github first time 
+		1. create a repo in github 
 
-	2. do this in your localhost path where you want to upload
-		git init 
-		git add yourfile
-		git commit -m "first commit"
-		git remote add origin https://yourname@github.com/yourname/reponame.git
+		2. do this in your localhost path where you want to upload
+			git init 
+			git add yourfile
+			git commit -m "first commit"
+			git remote add origin https://yourname@github.com/yourname/reponame.git
+			git push -u origin master
+			# then input your password
+
+	# 3. push an existing repository 
 		git push -u origin master
-		# then input your password
 
-# 3. push an existing repository 
-	git push -u origin master
-
-# recover
+# checkout
 	# back to the latest file status
-		git checkout filename
+		git checkout filename	# checkout by filename 
+		git checkout <commit hash>   #　检出历史版本
+		git checkout <commit hash>:<file> >test1.txt   #　检出历史版本
+
+
 # find
 #	# find the files history 
 #		git log --pretty=oneline <filename>
