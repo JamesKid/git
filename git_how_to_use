@@ -42,3 +42,6 @@
 # 3. push an existing repository 
 	git push -u origin master
 
+# recover
+	# back to the latest file status
+		git checkout filename
