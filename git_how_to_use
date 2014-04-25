@@ -45,3 +45,8 @@
 # recover
 	# back to the latest file status
 		git checkout filename
+# find
+#	# find the files history 
+#		git log --pretty=oneline <filename>
+#	# show the history content
+#		git show hashid
