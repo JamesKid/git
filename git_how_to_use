@@ -55,3 +55,13 @@
 #		git log --pretty=oneline <filename>
 #	# show the history content
 #		git show hashid
+
+# error
+	# permission denied (publickey ) fatal:
+	# The remote end hung up unexpectedly 
+	# in windows 7 
+		# 1. open git.bash
+		# 2. ssh-keygen
+		# 3. copy the '~/.ssh/id_rsa.pub'  file content to your githubweb ssh-key  
+		# test
+
