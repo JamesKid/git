@@ -64,4 +64,8 @@
 		# 2. ssh-keygen
 		# 3. copy the '~/.ssh/id_rsa.pub'  file content to your githubweb ssh-key  
 		# test
+	# not currently on any branch 
+		git checkout master		# checkout master
+		git pull				# pull file
+		git push				# push file
 
