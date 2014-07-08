@@ -45,7 +45,7 @@
 
 # checkout
 	# back to the latest file status
-		git checkout filename	# checkout by filename 
+		git checkout filename	# checkout by filename   (恢复未提交的删除)
 		git checkout <commit hash>   #　检出历史版本
 		git checkout <commit hash>:<file> >test1.txt   #　检出历史版本
 
