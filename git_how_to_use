@@ -49,6 +49,37 @@
 		git checkout <commit hash>   #　检出历史版本
 		git checkout <commit hash>:<file> >test1.txt   #　检出历史版本
 
+# install my git server 
+	# teach web 
+		http://www.2cto.com/os/201302/188366.html
+	# server
+		yum install git
+		setenforce 0  # close selinux
+		sudo adduser git 
+		su git 
+		cd ~
+		mkdir .ssh
+		cd work
+		mkdir /home/git/work/project.git 
+		cd project.git
+		git --bare init # init git server repo
+
+	# client 
+		# init git 
+			cd ~/.ssh 
+			ssh-keygen
+			cat id_rsa.pub >> /mnt/server/home/.ssh/authorized_keys
+			cd /var/my_project
+			git init
+			touch test.txt
+			git add test.txt
+			git commit -m " add test.txt file "
+			git remote add origin ssh://git@ip/home/git/work/project.git
+			git push origin master
+
+		# clone git 
+			git clone ssh://git@ip/home/git/work/project.git
+
 
 # find
 #	# find the files history 
