@@ -48,6 +48,18 @@
 		git checkout filename	# checkout by filename   (恢复未提交的删除)
 		git checkout <commit hash>   #　检出历史版本
 		git checkout <commit hash>:<file> >test1.txt   #　检出历史版本
+# branch  (分支)
+	# create (创建分支)
+		git branch local # add a branch named 'local'
+		git branch       # show all branch  * means the branch you in 
+		git checkout local # go to local branch 
+	# merge (合并分支)
+		git checkout master  # 将当前分支切换为master
+		git merge local      # 将local分支与当前分支合并
+		git branch -d local  # 删除local 分支
+
+
+
 # pull 
 	# 查看本地
 		git stash	# 备份当前工作区的内容
