@@ -102,6 +102,11 @@
 		# clone git 
 			git clone ssh://git@ip/home/git/work/project.git
 
+		# remote 更新ip
+			 git remote rm origin
+			 git remote add origin https://yourname@github.com/yourname/reponame.git
+			 git push origin master
+
 
 # find
 #	# find the files history 
