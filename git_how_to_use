@@ -97,6 +97,7 @@
 			git add test.txt
 			git commit -m " add test.txt file "
 			git remote add origin ssh://git@ip/home/git/work/project.git
+			# git remote add origin ssh://git@ip:端口/home/git/work/project.git
 			git push origin master
 
 		# clone git 
@@ -104,7 +105,8 @@
 
 		# remote 更新ip
 			 git remote rm origin
-			 git remote add origin https://yourname@github.com/yourname/reponame.git
+			 git remote add origin ssh://git@ip/home/git/work/project.git # 本地更新
+			 #git remote add origin https://yourname@github.com/yourname/reponame.git# web服务器端更新
 			 git push origin master
 
 
