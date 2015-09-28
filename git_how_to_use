@@ -42,6 +42,14 @@
 
 	# 3. push an existing repository 
 		git push -u origin master
+# branch 
+	# create branch 
+		git branch new_branch
+	# change to branch 
+		git checkout new_branch 	
+	# create branch and change to branch 
+		git checkout -b new_branch
+	# push branch 
 
 # checkout
 	# back to the latest file status
@@ -57,8 +65,6 @@
 		git checkout master  # 将当前分支切换为master
 		git merge local      # 将local分支与当前分支合并
 		git branch -d local  # 删除local 分支
-
-
 
 # pull 
 	# 查看本地
