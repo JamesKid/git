@@ -50,6 +50,25 @@
 	# create branch and change to branch 
 		git checkout -b new_branch
 	# push branch 
+# user
+	# add user 
+		vim ~/.gitconfig
+			[user]
+				name = username
+				email = email
+			[color]
+				ui = true
+			[alias] 
+				glog = log --graph
+	# change user 
+		vim ~/.gitconfig
+			[user]
+				name = change_username
+				email = change_email
+			[color]
+				ui = true
+			[alias] 
+				glog = log --graph
 
 # checkout
 	# back to the latest file status
@@ -65,6 +84,9 @@
 		git checkout master  # 将当前分支切换为master
 		git merge local      # 将local分支与当前分支合并
 		git branch -d local  # 删除local 分支
+# member (协作者,共同开发者)
+	# github
+		
 
 # pull 
 	# 查看本地
