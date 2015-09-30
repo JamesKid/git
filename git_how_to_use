@@ -86,7 +86,36 @@
 		git branch -d local  # 删除local 分支
 # hook
 	# github webhook
-	# git hook
+		1. linux创建用户www,添加密码
+		2. 切换到www用户
+		3. 在~/.ssh创建id_rsa.pub 并拷贝到github主仓库上的ssh-key
+		4.  在home配置用户
+			vim ~/.gitconfig
+				[user]
+					name = username
+					email = xx@xx.com
+				[color]
+					ui = true
+				[alias] 
+					glog = log --graph
+		5. 将nginx.conf ,php-fpm.conf 用户配置为www,重启服务,或重启系统  (配置方法查看nginx_command.sh)
+		6. 创建可以访问的webhook钩子脚本
+			vim www.xxx.com/push.php
+			<?php  
+				$www_folder = "/alidata/www/default/movie";  
+				$raw_json = file_get_contents('php://input');  
+				print_r(json_decode($raw_json, true));  
+				echo shell_exec(" cd $www_folder ; git pull 2>&1");  
+				//echo shell_exec("whoami 2>&1");  //输出当前用户,查看是否是www
+			?>
+		7. 在github上创建webhook,链接指向www.xxx.com/push.php
+		# 全局邮箱配置方法
+			git config --global user.name “xxx”  
+			git config --global user.email “xxx@xxx.com"  
+		# 常见问题
+			# git pull error: cannot open .git/FETCH_HEAD: Permission denied 原因和解决 
+			将.git/目录给与www操作权限
+			
 # member (协作者,共同开发者)
 	# first 
 		change user 
