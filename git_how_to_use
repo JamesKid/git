@@ -153,6 +153,7 @@
 	# second
 		# 用这个方式可以免除密码
 		git clone git@github.com:helpprojectname/test.git	
+		git push origin master
 
 # pull 
 	# 查看本地
