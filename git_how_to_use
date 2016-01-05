@@ -229,14 +229,19 @@
 
 # error
 	# permission denied (publickey ) fatal:
-	# The remote end hung up unexpectedly 
-	# in windows 7 
-		# 1. open git.bash
-		# 2. ssh-keygen
-		# 3. copy the '~/.ssh/id_rsa.pub'  file content to your githubweb ssh-key  
-		# test
+		# The remote end hung up unexpectedly 
+		# in windows 7 
+			# 1. open git.bash
+			# 2. ssh-keygen
+			# 3. copy the '~/.ssh/id_rsa.pub'  file content to your githubweb ssh-key  
+			# test
 	# not currently on any branch 
 		git checkout master		# checkout master
 		git pull				# pull file
 		git push				# push file
+	# Agent admitted failure to sign usering the key 
+		重新生成 sshkey
+		ssh-add  # 当前用户用执行ssh-add
+
+
 
