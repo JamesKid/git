@@ -6,7 +6,23 @@
 
 # install 
 		# client 
-			yum install svn
+				# install 1.8 verstion
+						# web 
+								http://tecadmin.net/install-subversion-1-8-on-centos-rhel/
+						# install
+								# step1
+									vim /etc/yum.repos.d/wandisco-svn.repo 	
+										[WandiscoSVN]
+										name=Wandisco SVN Repo
+										baseurl=http://opensource.wandisco.com/centos/$releasever/svn-1.8/RPMS/$basearch/
+										enabled=1
+										gpgcheck=0
+								# step2
+										yum remove subversion
+								# step3
+										yum clean all 
+										yum install subversion
+										svn --version
 		# server
  
 #  use 
