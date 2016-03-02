@@ -62,6 +62,7 @@
 		# diff  (比较差异)
 				svn diff path # (将修改的文件与基础版本比较)
 				svn diff test.php
+				svn diff .    # 查看当前项目改变了的内容
 
 				
 
