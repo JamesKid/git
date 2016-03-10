@@ -57,12 +57,28 @@
 				svn delete test.php | svn ci -m 'delete test file' # 推荐使用这种
 		# log  (查看日志)
 				svn log path  # 查看日志
-		# info  (查看文件详细信息)
+		# info  (查看文件详细信息,所在分支)
 				svn info path  # 例如：svn info test.php
+
 		# diff  (比较差异)
 				svn diff path # (将修改的文件与基础版本比较)
 				svn diff test.php
 				svn diff .    # 查看当前项目改变了的内容
+
+		# list  (查看文件，查看列表)
+				svn list http://xx.xx.la/program/branch  # 查看program项目分支
+				svn ls  # 简写 
+
+		# mkdir ( 创建纳入版本控制下的新目录)
+
+				 svn mkdir 目录名
+				 svn mkdir newdir
+
+		# switch （切换分支)
+				svn switch ^/branches/branchesName  # 切换到分支branchesName 下
+				svn swith ^/trunk   # 切换到trunk 分支
+				
+
 
 				
 
