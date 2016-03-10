@@ -26,6 +26,10 @@
 		# server
  
 #  use 
+		# help 帮助
+				svn --help  # 打开帮助文件
+				svn --help switch # 打开swith的帮助文件
+
 		# learn web
 				http://blog.chinaunix.net/uid-22150747-id-189264.html
 		# checkout (下载到本地目录) 
