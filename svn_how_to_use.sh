@@ -81,6 +81,9 @@
 		# switch （切换分支)
 				svn switch ^/branches/branchesName  # 切换到分支branchesName 下
 				svn swith ^/trunk   # 切换到trunk 分支
+		# merge (合并分支)
+			svn merge -r m:n path
+			svn merge -r 200:205 test.php #（将版本200与205之间的差异合并到当前文件，但是一般都会产生冲突，需要处理一下）
 				
 
 
