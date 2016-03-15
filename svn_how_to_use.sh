@@ -68,6 +68,7 @@
 				svn diff path # (将修改的文件与基础版本比较)
 				svn diff test.php
 				svn diff .    # 查看当前项目改变了的内容
+				svn diff  -r 200:201 test.php    # 对修正版本号200 和 修正版本号201 比较差异
 
 		# list  (查看文件，查看列表)
 				svn list http://xx.xx.la/program/branch  # 查看program项目分支
@@ -82,8 +83,14 @@
 				svn switch ^/branches/branchesName  # 切换到分支branchesName 下
 				svn swith ^/trunk   # 切换到trunk 分支
 		# merge (合并分支)
-			svn merge -r m:n path
-			svn merge -r 200:205 test.php #（将版本200与205之间的差异合并到当前文件，但是一般都会产生冲突，需要处理一下）
+				svn merge -r m:n path
+				svn merge -r 200:205 test.php #（将版本200与205之间的差异合并到当前文件，但是一般都会产生冲突，需要处理一下）
+
+		# revert (恢复本地修改)
+				svn revert foo.c		# 丢弃对一个文件的修改
+
+		# resolved (解决冲突)
+			svn resolved [本地目录全路径] 
 				
 
 
