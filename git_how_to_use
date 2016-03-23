@@ -246,6 +246,12 @@
 		git show hashid
 
 # error
+	# 403 github push错误The requested URL returned error: 403 Forbidden while accessing 
+		vim .git/config  # 在git项目目录下编辑config
+		# 改 origin 节点 url = https://github.com/wangz/example.git   为如下
+		url = https://wangz@github.com/wangz/example.git  
+		git push  #　就ok了
+		
 	# permission denied (publickey ) fatal:
 		# The remote end hung up unexpectedly 
 		# in windows 7 
