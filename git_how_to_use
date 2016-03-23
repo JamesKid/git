@@ -51,6 +51,19 @@
 		git checkout new_branch 	
 	# create branch and change to branch 
 		git checkout -b new_branch
+	# push branch to remote (提交到远程分支)
+		git commit -a -m 'my new branch'
+		git push origin branchName:branchName  # 提交分支
+	# push branch to master(把本地的某个分支mybranch提交到远程仓库，并作为远程仓库的master分支
+		git push origin mybranch:master
+	# show remote branch (查看远程分支)
+		git branch -r
+	# delete (删除分支)
+		git push origin:branchName  #  删除远程分支
+		git branch -d branchName    #  删除本地分支，强制删除用-D
+	# merge (分支合并)
+		git merge branchName    # 将分支branchName和当前所在分支合并
+
 	# push branch 
 # user
 	# add user 
