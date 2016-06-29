@@ -84,6 +84,17 @@
 				ui = true
 			[alias] 
 				glog = log --graph
+# tag (标签)
+	# 功能描述,
+		跟分支无关，只是在当前代码状态下打一个标记，下次还可以切换到这个标记,相当于是一个释放的版本号
+	# use
+		git tag    # 查看标签
+		git tag -l # 查看标签
+		git tag -a v1.01 -m "Relase version 1.01" # 添加tag
+		git push origin -tags                     # 提交标签到远程仓库
+		git tag -d v1.01     # 删除标签
+		git push origin :refs/tags/v1.01   # 删除远程标签
+
 
 # checkout
 	# back to the latest file status
