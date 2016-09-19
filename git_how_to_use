@@ -12,6 +12,10 @@
 			# cd ~/.ssh
 			# ssh-keygen -t rsa -C "YourEmail"
 			press enter to continue
+            # tips 
+                # 重新生成key后会报错
+                # 如果报错　 Agent admitted failure to sign using the key 
+                # 解决：　命令行下执行 ssh-add  命令即可
 
 		2.add ssh key to github 
 			login your github,then --> account-setting -->SSH Keys --> Add SSH Key 
