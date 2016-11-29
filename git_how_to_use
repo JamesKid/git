@@ -8,34 +8,37 @@
 
 # basic use 
 	# 1. how to clone repo from github
-		1.config local ssh key 
-			# cd ~/.ssh
-			# ssh-keygen -t rsa -C "YourEmail"
-			press enter to continue
+		# 1.config local ssh key 
+			 cd ~/.ssh
+			 ssh-keygen -t rsa -C "YourEmail"
+			 #press enter to continue
             # tips 
                 # 重新生成key后会报错
                 # 如果报错　 Agent admitted failure to sign using the key 
                 # 解决：　命令行下执行 ssh-add  命令即可
 
-		2.add ssh key to github 
-			login your github,then --> account-setting -->SSH Keys --> Add SSH Key 
-			input a title to "Title"
-			input  ~/.ssh/iid_rsa.pub conent to "Key"
+		# 2.add ssh key to github 
+		    login your github,then --> account-setting -->SSH Keys --> Add SSH Key 
+		    input a title to "Title"
+		    input  ~/.ssh/iid_rsa.pub conent to "Key"
 
-		3.clone it from github to localhost 
-			# mkdir php
-			# cd php
-			# git clone git@github.com:YourAccountName/RepositoriesName
+		# 3.clone it from github to localhost 
+		    mkdir php
+		    cd php
+		    git clone git@github.com:YourAccountName/RepositoriesName
+        # git clone -b php7 https://github.com/phpredis/phpredis.git  # 拷贝找定分支代码
 
-		4.test 
-			# touch test1
-			# git add test1
-			# git commit -m "test1"
+		# 4.test 
+		    touch test1
+		    git add test1
+		    git commit -m "test1"
 
-		5.push it to github
-			# git push 
+		# 5.push it to github
+		    git push 
 		
 	# 2. how to pull local to github first time 
+                print_r($result);die;
+                print_r($result);die;
 		1. create a repo in github 
 
 		2. do this in your localhost path where you want to upload
@@ -114,6 +117,14 @@
 		git checkout master  # 将当前分支切换为master
 		git merge local      # 将local分支与当前分支合并
 		git branch -d local  # 删除local 分支
+
+# log (版本日志)
+    git log filename  # 显示文件提交记录信息
+    git log -p filename  # 显示文件详情更改信息  ****
+    git reset commit 版本号 filename  # 恢复该文件
+    git log  --author=jameskid  # 查看作者为jameskid的提交
+    git log --stat     # 查看文件行增减
+
 # hook
 	# github webhook
 		1. linux创建用户www,添加密码
