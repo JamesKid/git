@@ -248,6 +248,7 @@
 		mkdir .ssh
 		cd work
 		mkdir /home/git/work/project.git 
+        chmod -R 777 /home/git/work/project.git
 		cd project.git
 		git --bare init # init git server repo
 
