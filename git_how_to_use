@@ -139,10 +139,15 @@
 		git branch local # add a branch named 'local'
 		git branch       # show all branch  * means the branch you in 
 		git checkout local # go to local branch 
+
 	# merge (合并分支)
 		git checkout master  # 将当前分支切换为master
 		git merge local      # 将local分支与当前分支合并
 		git branch -d local  # 删除local 分支
+
+    # conflict (冲突)
+        git diff test.txt  # 查看冲突文件
+        vim test.txt     # 直接编辑冲突文件
 
 # log (版本日志)
     git log filename  # 显示文件提交记录信息
