@@ -147,7 +147,14 @@
 
     # conflict (冲突)
         git diff test.txt  # 查看冲突文件
-        vim test.txt     # 直接编辑冲突文件
+        vim test.txt       # 直接编辑冲突文件
+        git mergetool      # 打开vimdiff 工具解决冲突
+            # vimdiff  常用命令
+                ]c   #  跳转到下一个diff点
+                [c   #  跳转到上一个diff点
+                dp   # 一个差异点中当前文件的内容复制到另一个文件里
+                do   # 把另一个文件的内容复制到当前行中
+                :diffupdate  # 在修改一个或两个文件之后，vimdiff会试图自动来重新比较文件，以便实时地反映比较结果。但是有时候会处理失败，这个时候就需要手工来刷新。
 
 # log (版本日志)
     git log filename  # 显示文件提交记录信息
