@@ -268,7 +268,7 @@
 		# init git 
 			cd ~/.ssh 
 			ssh-keygen
-			cat id_rsa.pub >> /mnt/server/home/.ssh/authorized_keys
+			cat id_rsa.pub >> /mnt/server/home/git/.ssh/authorized_keys
 			cd /var/my_project
 			git init
 			touch test.txt
