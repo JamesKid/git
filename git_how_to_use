@@ -89,8 +89,8 @@
 		git push origin branchName:branchName  # 提交分支
 	# push branch to master(把本地的某个分支mybranch提交到远程仓库，并作为远程仓库的master分支
 		git push origin mybranch:master
-	# show remote branch (查看远程分支)
-		git branch -r
+	# show remote branch (查看远程分支) ******
+		git branch -r  # ******
 	# delete (删除分支)
 		git push origin:branchName  #  删除远程分支
 		git branch -d branchName    #  删除本地分支，强制删除用-D
