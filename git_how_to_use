@@ -261,6 +261,7 @@
 		cd work
 		mkdir /home/git/work/project.git 
         chmod -R 777 /home/git/work/project.git
+        chown -R git:git project.git  # give the permission to git user
 		cd project.git
 		git --bare init # init git server repo
 
