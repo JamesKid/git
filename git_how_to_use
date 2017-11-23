@@ -335,5 +335,9 @@
 		重新生成 sshkey
 		ssh-add  # 当前用户用执行ssh-add
 
+    # fatal: unable to find remote helper for 'https'
+        yum install -y libcurl-devel  # 安装依赖后重新编译安装即可
+        
+
 
 
