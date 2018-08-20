@@ -337,7 +337,11 @@
 
     # fatal: unable to find remote helper for 'https'
         yum install -y libcurl-devel  # 安装依赖后重新编译安装即可
-        
+
+    # git error: object file is empty
+        find .git/objects/ -type f -empty | xargs rm
+        git fetch -p
+        git fsck --full
 
 
 
