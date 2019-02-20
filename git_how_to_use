@@ -293,19 +293,25 @@
 #  clean git 
     # web 
         #   https://blog.csdn.net/yc1022/article/details/56487680
-    # method 
-        1.Checkout
-           git checkout --orphan latest_branch
-        2. Add all the files
-           git add -A
-        3. Commit the changes
-           git commit -am "commit message"
-        4. Delete the branch
-           git branch -D master
-        5.Rename the current branch to master
-           git branch -m master
-        6.Finally, force update your repository
-           git push -f origin master
+    # 1.( 清理过大 .git目录 )
+        # method 
+            1.Checkout
+               git checkout --orphan latest_branch
+            2. Add all the files
+               git add -A
+            3. Commit the changes
+               git commit -am "commit message"
+            4. Delete the branch
+               git branch -D master
+            5.Rename the current branch to master
+               git branch -m master
+            6.Finally, force update your repository
+               git push -f origin master
+
+    # 2. clean file log (请理指定文件日志)
+        git filter-branch -f --tree-filter 'rm -rf dir/filename' HEAD
+        git push origin --force
+        
 
 # find
 #	# find the files history 
