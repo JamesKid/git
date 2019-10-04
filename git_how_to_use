@@ -365,5 +365,8 @@
         git fetch -p
         git fsck --full
 
+    # 莫名奇妙报出一大堆 diff mode 
+        git config --add core.filemode false
+
 
 
