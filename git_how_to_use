@@ -164,6 +164,24 @@
     git log --stat     # 查看文件行增减
 
 # hook
+    # github server hook 
+        1. 进入裸仓库 （/home/git/work/myconf.git)
+        2. 进入hook 目录 hooks  （）
+        3. 将post-update.sample 拷贝到  post-update ,并添加以下内容 
+            export LANG=zh_CN.UTF-8
+            cd /var/www/html/download.xxx.com  
+            unset GIT_DIR  # 重要 ，需要添加本行以，否则git 命令执行不了
+            git pull origin master 
+
+        4. 添加authkey 免密码登录 
+        5. 把拉下来的项目权限给到对应 的git 账户， 包括.git 文件下的所有文件 
+        
+        Tips
+            1. 调试方法 
+                touch test.txt      (看看钩子能不能执行)
+            2. 切到相应账户，看git pull origin master 能不能执行
+
+
 	# github webhook
 		1. linux创建用户www,添加密码
 		2. 切换到www用户
